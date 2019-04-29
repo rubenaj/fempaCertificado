@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+ <title>Calculadora sencilla</title>
+ 
+<script>
+
+function calcula(operacion){
+   //var operando1 = document.calc.operando1.value
+    //var operando2 = document.calc.operando2.value
+  //var operando1=document.getElementsByName("operando1");
+  //var operando2=document.getElementsByName("operando2");
+       var operando= document.getElementsByTagName("input");
+   
+    var result = eval(operando[0].value + operacion + operando[1].value);
+    document.calc.resultado.value = result;
+}
+</script>
+
+ 
+</head>
+
+<body>
+
+<h1>Calculadora sencilla</h1>
+<br>
+
+<form name="calc">
+<input type="Text" id="numero1" name="operando1" value="0" size="12">
+<br>
+<input type="Text" id="numero2" name="operando2" value="0" size="12">
+<br>
+<input type="Button" name="" value=" + " onclick="calcula('+')">
+<input type="Button" name="" value=" - " onclick="calcula('-')">
+<input type="Button" name="" value=" X " onclick="calcula('*')">
+<input type="Button" name="" value=" / " onclick="calcula('/')">
+<br>
+<input type="Text" name="resultado" value="0" size="12">
+<input type="reset" value="C">
+</form>
+
+
+</body>
+</html>
