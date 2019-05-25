@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="saludar(this)">Ruben</button>
+
+    <p id="saludo"></p>
+
+    <script>
+        //Inserta 4 botones con 4 nombres de personas. Cuando se pulse el 
+        //boton, bajo de los 4 elementos pondrá: "Hola 'nombre_seleccionado'
+
+        function saludar(persona) {
+            var persona = persona.innerHTML;
+            document.getElementById("saludo").innerHTML = "hola " + persona;
+
+
+        }
+    </script>
+</body>
+
+</html>
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button id="nombre" onclick="saludar(holas='pipo')">pipo</button>
+    <button id="nombre" onclick="saludar('pepa')">pepa</button>
+    <button id="nombre" onclick="saludacion(this)">pupi</button>
+    <button id="nombe" onclick="saludos()">popo</button>
+    <p id="salutaciones"></p>
+    <script>
+        function saludacion(nombre){
+            var cosa = nombre.innerHTML;
+            document.getElementById("salutaciones").innerHTML = "hola "+ cosa;
+        }
+        function saludar(holas){
+            
+            document.getElementById("salutaciones").innerHTML = "hola "+ holas;
+        }
+        function saludos(){
+            var elemento = document.getElementById("nombe");
+            
+            document.getElementById("salutaciones").innerHTML = "hola "+ elemento.innerHTML;-->

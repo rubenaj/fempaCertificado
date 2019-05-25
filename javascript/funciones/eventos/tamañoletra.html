@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="texto">Texto que aumenta o decrementa</p>
+    <input id="aumenta" type="button" onclick="aumentaTexto('aumenta')" value="Aumenta">
+    <input id="decrementa" type="button" onclick="decrementaTexto('decrementa')" value="Decrementa">
+
+</body>
+
+
+<script>
+    var btnAum = document.getElementById("aumenta");
+    var btnDecr = document.getElementById("decrementa");
+    var parrafo = document.getElementById("texto");
+    var cont = 18;
+    parrafo.style.fontSize = "18px";
+
+
+    function aumentaTexto(id) {
+        cont++;
+        parrafo.style.fontSize = cont + "px";
+    }
+
+    function decrementaTexto(id) {
+        cont--;
+        parrafo.style.fontSize = cont + "px";
+
+    }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="background:blue">
+    <button id="tirar" onclick="dados()">Tirar dados</button>
+    </br>
+    </br>
+    </br>
+    </br>
+    <img src="" id="imagen" />
+
+
+    <script>
+        var listaImagenes = new Array(10);
+        listaImagenes[0] = "./resources/dado1.png";
+        listaImagenes[1] = "./resources/dado2.jpg";
+        listaImagenes[2] = "./resources/dado3.png";
+        listaImagenes[3] = "./resources/dado4.png";
+        listaImagenes[4] = "./resources/dado5.png";
+        listaImagenes[5] = "./resources/dado6.png";
+        //escribe el codigo necesario para mostrar una imagen diferente dependiendo del segundo en el que se
+        //cargue la página
+        //..
+
+
+        function dados() {
+            var hoy = new Date();
+            var segundos = hoy.getSeconds();
+            var opcion = segundos % 6;
+            var elemento = document.getElementById("imagen");
+            elemento.src = listaImagenes[opcion];
+        }
+    </script>
+</body>
+
+</html>

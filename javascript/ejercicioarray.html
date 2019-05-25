@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejercicio 7 array</title>
+</head>
+
+<body>
+    <script>
+        var myVar = "Prueba de una matriz multidimensional;";
+        var nb = 100;
+        var a = new Array(nb); // crea una matriz de longitud 4
+        for (var i = 0; i < nb; i++) {
+
+            a[i] = new Array(nb); // define cada elemento como una matriz de longitud 4
+            for (var j = 0; j < nb; j++) {
+                a[i][j] = Math.floor((Math.random() * 10) + 1);
+                console.log(" array[" + i + "][" + j + "] = " + a[i][j]);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

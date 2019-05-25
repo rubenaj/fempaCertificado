@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body style="text-align: center; padding: 25px; background-color: black; color:blue;">
+    <iframe src="https://giphy.com/embed/3osxYfP8SJVa9XpVyo" width="480" height="220" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <p><a href="https://giphy.com/gifs/vulture-batman-vs-superman-3osxYfP8SJVa9XpVyo">via GIPHY</a></p>
+    <button onclick="accion(this)">piedra</button>
+    <button onclick="accion(this)">papel</button>
+    <button onclick="accion(this)">tijeras</button>
+    <br />
+    <br />
+    <br />
+    <div id="mesaJuego" style="border-color: green">
+
+        <div>
+            <div style="float: left;">
+                <p>Jugador</p>
+                <img src="" id="imagenJugador" />
+
+
+            </div>
+            <div style="float: right;">
+                <p>Maquina</p>
+                <img src="" id="imagenMaquina" />
+            </div>
+
+        </div>
+
+
+
+
+        <div id="resultado" style="border-color:greenyellow;">
+            <img src="" id="imagenResultado" />
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+        var mesa = document.getElementById("mesaJuego");
+        var eleccion = document.getElementById("imagenJugador");
+        var maquina = document.getElementById("imagenMaquina");
+        var resultado = document.getElementById("resultado");
+        var trofeo = document.getElementById("imagenResultado");
+        mesa.style.width = "500px";
+        resultado.style.width = "500px";
+        var seleccionImg = new Array(3);
+        seleccionImg[0] = "./resources/piedra.png";
+        seleccionImg[1] = "./resources/papel.png";
+        seleccionImg[2] = "./resources/tijeras.png";
+        var trofeoImg = new Array(3);
+        trofeoImg[0] = "./resources/DERROTA.png";
+        trofeoImg[1] = "./resources/VICTORIA.png";
+        trofeoImg[2] = "./resources/EMPATE.png";
+
+        function accion(seleccionar) {
+            // var botonOpcion = document.getElementById("eleccion");
+            var seleccion = seleccionar.innerHTML;
+            var hoy = new Date();
+            var segundos = hoy.getSeconds();
+            var opcionMaquina = segundos % 3;
+
+            // var seleccionMaquina = 0;
+            if (seleccion == "piedra") {
+                var opcionJugador = 0;
+            } else if (seleccion == "papel") {
+                var opcionJugador = 1;
+            } else if (seleccion == "tijeras") {
+                var opcionJugador = 2;
+            }
+            eleccion.src = seleccionImg[opcionJugador];
+            maquina.src = seleccionImg[opcionMaquina];
+            if (opcionJugador == opcionMaquina) {
+                console.log("empate");
+                trofeo.src = trofeoImg[2];
+            } else if (opcionJugador == 0 && opcionMaquina == 1) {
+                console.log("perdiste");
+                trofeo.src = trofeoImg[0];
+            } else if (opcionJugador == 0 && opcionMaquina == 2) {
+                console.log("ganaste");
+                trofeo.src = trofeoImg[1];
+            } else if (opcionJugador == 1 && opcionMaquina == 0) {
+                console.log("ganaste");
+                trofeo.src = trofeoImg[1];
+            } else if (opcionJugador == 1 && opcionMaquina == 2) {
+                console.log("perdiste");
+                trofeo.src = trofeoImg[0];
+            } else if (opcionJugador == 2 && opcionMaquina == 0) {
+                console.log("perdiste");
+                trofeo.src = trofeoImg[0];
+            } else if (opcionJugador == 2 && opcionMaquina == 1) {
+                console.log("ganaste");
+                trofeo.src = trofeoImg[1];
+            }
+        }
+    </script>
+</body>
+
+</html>
