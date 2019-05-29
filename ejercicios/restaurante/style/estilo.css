@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana;
+    color: #030303;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+}
+
+.backgroungimage {
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.video {
+    float: center;
+}
+
+.tableindex {
+    align-content: center;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.tableindex img,
+.tableindex td {
+    width: 200px;
+    background: #EBC8A5;
+}
+
+.menuder {
+    float: right;
+}
+
+.menuizq {
+    float: left;
+}
+
+.menu {
+    float: right;
+    width: 20%;
+    text-align: center;
+}
+
+.menu a {
+    background-color: #f01212;
+    padding: 8px;
+    margin-top: 7px;
+    display: block;
+    width: 100%;
+    color: black;
+}
+
+.banner {
+    width: 1000px;
+    height: 240px;
+}
+
+.divHeader {
+    background-color: #ED1C24;
+    padding: 15px;
+    text-align: center;
+}
+
+.imgmain {
+    margin-left: -50px;
+}
+
+.main {
+    float: left;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.contenidoPrincipal {
+    width: 1000px;
+}
+
+.divfooter {
+    background-color: #ED1C24;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.footerone {
+    margin: 150px 0 0 0;
+    width: 20%;
+    float: left;
+}
+
+.imgfooter {
+    float: right;
+    margin-right: 0px;
+    margin-bottom: 0;
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 400px;
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 400px;
+}
+
+@media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .menu,
+    .main,
+    .right {
+        width: 100%;
+    }
+}

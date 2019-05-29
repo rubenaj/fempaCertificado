@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="nombre" onchange="validar()" />
+
+    <script>
+        function validar() {
+            var contenido = document.getElementById("nombre");
+            //si el campo esta vacio pinta el borde naranja
+
+            // si el campo es menor a 10 caracteres, pinta el borde rojo
+            console.log(contenido.value.length);
+
+            if (contenido.value == "") {
+                contenido.style.borderColor = "orange"
+            } else if (contenido.value.length < 10) {
+                contenido.style.borderColor = "red"
+
+            }
+        }
+    </script>
+</body>
+
+</html>

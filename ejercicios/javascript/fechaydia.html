@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <script>
+        var listaDias = n ew Array('domingo', 'lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado');
+        var listaMeses = new Array('enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre');
+
+        var fecha = new Date();
+        var diaSemana = fecha.getDay();
+        var diaMes = fecha.getDate();
+        var mes = fecha.getMonth();
+        var ano = fecha.getFullYear();
+
+        var hora = fecha.getHours();
+        var min = fecha.getMinutes();
+
+        document.write(listaDias[diaSemana] + ", " + diaMes + " de " + listaMeses[mes] + " del " + ano + " " + hora + ":" + min);
+
+
+        //document.write(listaDias[diaSemana-1]);
+    </script>
+</body>
+
+</html>

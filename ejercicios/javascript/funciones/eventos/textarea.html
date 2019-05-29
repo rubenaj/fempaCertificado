@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="formul">
+        <textarea name=textito cols=40 rows=3> 
+                Este es el texto por defecto 
+                </textarea>
+        <br>
+        <br> Número de caracteres <input type="Text" name="numCaracteres" size="4">
+        <br>
+        <br>
+        <input type=button value="Cuenta caracteres" onclick="cuenta()">
+    </form>
+
+
+    <script>
+        function cuenta() {
+            numCaracteres = document.formul.textito.value.length
+            document.formul.numCaracteres.value = numCaracteres
+        }
+        //Inserta un textarea. Bajo de ese elemento, debe de aparecer un texto
+        //con los carácteres que se llevan escritos. Debe de actualizarse cada
+        //vez que se pulsa una letra.
+        //Debe impedirse que se inserten más de 20 caractéres
+    </script>
+</body>
+
+</html>

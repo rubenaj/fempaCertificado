@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="pulsa" onmouseover="aleatorio()" style="position:absolute;">PULSAMe</button>
+    <script>
+        function aleatorio() {
+            /*
+             Pon un botón "pulsame si puedes" que al pasar el ratón por encima,cambie a una posición aleatoria de la pantalla.
+                            Ayuda:  Recuerda que el la "position:absolute"
+                                    Para obtener el ancho de la ventana: window.innerWidth
+                                    Para obtener el alto de la ventana: window.innerHeight
+            */
+            var alturaMax = window.innerHeight;
+            var anchoMax = window.innerWidth;
+            var boton = document.getElementById("pulsa");
+            var altura = Math.random() * alturaMax + "px";
+            var ancho = Math.random() * anchoMax + "px";
+
+            boton.style.top = altura;
+            boton.style.left = ancho;
+        }
+    </script>
+</body>
+
+</html>
